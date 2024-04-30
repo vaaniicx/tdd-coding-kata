@@ -25,7 +25,7 @@ function findShipCoordinates(map) {
         if (rows[index].indexOf('X') > -1) {
             // Ship is here in this row -> set coordinates
             let x = rows[index].indexOf('X'); // Set x to the position of 'X' in the row
-            let y = (rows.length - index) - 1; // Substract current index - 1 from the number of total rows
+            let y = (rows.length - index) - 1; // Subtract current index - 1 from the number of total rows
             return [x, y];
         }
     }
