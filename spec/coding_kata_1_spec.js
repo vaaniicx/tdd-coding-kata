@@ -11,14 +11,14 @@ describe('Coding Kata 1', function() {
     });
 
     it('Should return "Spaceship lost forever." for given map', function() {
-        shipFinder.find('..\n..');
+        expect(shipFinder.find('..\n..')).toEqual("Spaceship lost forever.");
     });
 
     it('Should return [1,0] for given map', function() {
-        shipFinder.find('...\n.X.');
+        expect(shipFinder.find('...\n.X.')).toEqual("Ship found at (1, 0).");
     });
 
     it('Should return [7,2] for given map', function() {
-        shipFinder.find('..........\n..........\n..........\n.......X..\n..........\n..........');
+        expect(shipFinder.find('..........\n..........\n..........\n.......X..\n..........\n..........')).toEqual("Ship found at (7, 2).");
     });
 });
