@@ -11,4 +11,4 @@ function calculateSumFromString(string_numbers) {
 		sum += parseInt(char);
 	});
 	return sum;
-}
+};
