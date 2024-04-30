@@ -13,12 +13,6 @@
  * If you cannot find the spaceship, the result should be "Spaceship lost forever."
  */
 
-/**
- * TODO:
- * - Write function findSpaceship(map) -> returns Coordinates of found ship (x,y)
- * - Return "Spaceship lost forever." if the ship cannot be found
- */
-
 function ShipFinder() {}
 ShipFinder.prototype.find = function(map) {
     let coordinates = findShipCoordinates(map);
