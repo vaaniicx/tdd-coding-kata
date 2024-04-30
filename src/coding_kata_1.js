@@ -20,4 +20,20 @@
  */
 
 function ShipFinder() {}
-ShipFinder.prototype.find = function(input) {};
+ShipFinder.prototype.find = function(map) {
+    let coordinates = findShipCoordinates(map);
+    return coordinates ? "Ship found at (" + coordinates[0] + ", " + coordinates[1] + ")." : "Spaceship lost forever.";
+};
+
+function findShipCoordinates(map) {
+    let rows = map.split('\n');
+    for (let index = 0; index < rows.length; index++) {
+        if (rows[index].indexOf('X') > -1) {
+            // Ship is here in this row -> set coordinates
+            let x = rows[index].indexOf('X'); // Set x to the position of 'X' in the row
+            let y = (rows.length - index) - 1; // Substract current index - 1 from the number of total rows
+            return [x, y];
+        }
+    }
+    return null; // Ship cannot be found
+}
