@@ -17,4 +17,8 @@
  */
 
 function Electrons() {}
-Electrons.prototype.solve = function() {};
+Electrons.prototype.solve = function() {
+    return [...arguments]
+        .filter((a) => a % 2 != 0) // Only keep odd numbers
+        .reduce((a, b) => a + b - 1, 0); // Subtract 1 per number and calculate sum
+};
